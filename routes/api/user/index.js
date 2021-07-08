@@ -47,7 +47,7 @@ router.post('/signup',async(req, res) =>{
               `
           }
 
-          console.log("afs");
+          
 
           sender.sendMail(composeMail,(err,data)=>{
               if(err){
