@@ -1,0 +1,97 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+}
+
+body{
+    overflow:hidden;
+   
+}
+.mainContainer{
+  background:url('/1.jpg') rgba(186, 120, 230, 0.363);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  /* background-attachment:fixed; */
+  height:100vh;
+  width:100vw;
+  background-blend-mode:soft-light;
+  filter:blur(2.5px);
+ 
+}
+
+#form{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    display:grid;
+    gap:20px;
+    padding: 50px;
+    background:rgba(221, 214, 214, 0.397);
+    border-radius: 30px;
+}
+
+h2{
+    font-weight: normal;
+}
+
+#newPassword, #confirmPassword{
+    outline:none;
+    border:none;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+#submit{
+
+    padding: 5px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    background:rgb(14, 148, 226);
+    color:white;
+    outline:none;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    margin: auto;
+   font-size: 1rem;
+    transition: transform .1s ease;
+}
+#submit:hover{
+    cursor: pointer;
+    transform:scale(1.05);
+}
+
+.message{
+    height: 200px;
+    width: 400px;
+    background:rgba(128, 128, 128, 0.342);
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border-radius:30px
+}
+
+.fa-check-circle{
+    color:rgb(15, 168, 15);
+    font-size: 5rem;
+    margin: auto;
+}
+h3{
+    color:white;
+    font-size: 2rem;
+}
+
+.grid{
+    margin:30px 0;
+    display:grid;
+    justify-content:center;
+    align-items:center
+}
