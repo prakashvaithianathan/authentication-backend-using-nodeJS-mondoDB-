@@ -69,7 +69,9 @@ router.get('/verify/:token',async (req, res)=>{
     try {
         const data = jwt.verify(req.params.token,process.env.SECRET_KEY)
        const verify = await userModel.findByIdAndUpdate({_id:data.userId},{verified:true})
-       res.json({message:'your account is verified. You can login'})
+       
+       res.render('verify')
+       
     } catch (error) {
         res.json({message:error.message})
     }
