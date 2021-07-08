@@ -39,7 +39,7 @@ router.post('/signup',async(req, res) =>{
               <div>
               <p><b>Hi, ${req.body.name}</b>. We welcome to our platform</p>
               <p>To verify your account, click below</p>
-              <a href="http://localhost:5000/api/user/verify/${token}">Click Here</a>
+              <a href="https://authentication-backend-nodejs.herokuapp.com/api/user/verify/${token}">Click Here</a>
               </div>
               `
           }
@@ -119,7 +119,7 @@ router.post('/forgot',async(req, res)=>{
             html:`
             <div>
             <p>To forgot your password. Don't worry, Click below to change your password(note: this link will expire in 1hr)</p>
-            <a href="http://localhost:5000/api/user/forgot/${token}">Click Here...</a>
+            <a href="https://authentication-backend-nodejs.herokuapp.com/api/user/forgot/${token}">Click Here...</a>
             </div>
             `
         }
