@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken')
 const authentication = require('../../../library').authentication
 
 const sender = nodeMailer.createTransport({
+    host:'smtp.gmail.com',
+    port:587,
     service:'gmail',
     auth:{
         user:process.env.SEND,
