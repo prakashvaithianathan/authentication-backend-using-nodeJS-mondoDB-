@@ -10,6 +10,10 @@ const sender = nodeMailer.createTransport({
     auth:{
         user:process.env.SEND,
         pass:process.env.PASSWORD
+    },
+    secure:true,
+    tls:{
+        rejectUnauthorized:false
     }
 })
 
@@ -41,6 +45,7 @@ router.post('/signup',async(req, res) =>{
               `
           }
 
+          console.log("afs");
 
           sender.sendMail(composeMail,(err,data)=>{
               if(err){
