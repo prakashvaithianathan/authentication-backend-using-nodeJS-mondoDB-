@@ -8,7 +8,7 @@ const authentication = require('../../../library').authentication
 const sender = nodeMailer.createTransport({
     service:'gmail',
     auth:{
-        user:'indupraka17@gmail.com',
+        user:process.env.SEND,
         pass:process.env.PASSWORD
     }
 })
@@ -46,12 +46,12 @@ router.post('/signup',async(req, res) =>{
               if(err){
                   console.log(err);
               }else{
-                  console.log('mail successfully sended. We have send verfication link to your mail'+data.response);
+                  console.log('mail successfully sended. '+data.response);
               }
           })
 
 
-         res.json({message:'user successfully added'})
+         res.json({message:'user successfully added. We have send verfication link to your mail'})
 
     } catch (error) {
         res.json({error: error.message})
