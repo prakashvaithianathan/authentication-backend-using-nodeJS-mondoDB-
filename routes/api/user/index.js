@@ -10,9 +10,6 @@ const sender = nodeMailer.createTransport({
     auth:{
         user:'indupraka17@gmail.com',
         pass:process.env.PASSWORD
-    },
-    tls:{
-        rejectUnauthorized:false
     }
 })
 
@@ -49,7 +46,7 @@ router.post('/signup',async(req, res) =>{
               if(err){
                   console.log(err);
               }else{
-                  console.log('mail successfully sended'+data.response);
+                  console.log('mail successfully sended. We have send verfication link to your mail'+data.response);
               }
           })
 
