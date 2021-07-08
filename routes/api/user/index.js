@@ -21,9 +21,9 @@ router.get('/',(req, res) => {
 })
 
 
-
 router.post('/signup',async(req, res) =>{
     try {
+        console.log("asg");
         const user = new userModel(req.body)
         const hash = await bcrypt.hash(user.password,10)
          user.password = hash;
