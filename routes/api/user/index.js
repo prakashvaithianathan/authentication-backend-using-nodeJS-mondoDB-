@@ -147,7 +147,7 @@ router.get('/forgot/:token',async(req, res)=>{
     try {
         const data = await jwt.verify(req.params.token,process.env.SECRET_KEY)
         if(data){
-            console.log(true);
+            res.json(true)
         }
         // res.render('home',{token:req.params.token})
     } catch (error) {
