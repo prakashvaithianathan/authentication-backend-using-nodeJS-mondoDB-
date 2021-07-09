@@ -146,7 +146,9 @@ router.post('/forgot',async(req, res)=>{
 router.get('/forgot/:token',async(req, res)=>{
     try {
         const data = await jwt.verify(req.params.token,process.env.SECRET_KEY)
-        res.json(data);
+        if(data){
+            console.log(true);
+        }
         // res.render('home',{token:req.params.token})
     } catch (error) {
         res.json({message:error.message})
